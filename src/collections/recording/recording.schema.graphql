@@ -1,0 +1,17 @@
+type Recording {
+id:UUID!
+name:String!
+length:Int
+youtubeUrls: [String]
+session:Session!
+playlists: [Playlist]
+}
+
+
+extend type Query {
+  recording(limit: Int!): [Recording!]
+}
+
+extend type Mutation {
+
+}

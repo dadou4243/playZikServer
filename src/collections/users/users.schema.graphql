@@ -1,0 +1,31 @@
+scalar EmailAddress
+type User {
+    id: String!
+    email: String
+    username:String!
+    phone_number:String
+    first_name:String
+    last_name:String
+    location:String
+
+    sessions: [Session]
+    playlists: [Playlist]
+  }
+
+extend type Query {
+  users(limit: Int!): [User!]
+}
+
+input UserInput{
+  email: String!
+  username:String!
+  phone_number:String
+  first_name:String
+  last_name:String
+  location:String
+}
+
+extend type Mutation {
+  createUser(params: UserInput): User
+
+}

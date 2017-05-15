@@ -1,0 +1,17 @@
+{
+  "presets": [
+    ["env", {
+      "targets": {
+        "node": "current"
+      }
+    }]
+  ],
+  "plugins": [
+    "transform-class-properties",
+    "babel-plugin-inline-import-graphql-ast",
+    "transform-export-extensions",
+    "transform-flow-strip-types",
+    "transform-object-rest-spread",
+    "transform-decorators-legacy"
+  ]
+}

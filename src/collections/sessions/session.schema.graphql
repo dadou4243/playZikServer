@@ -1,0 +1,16 @@
+type Session {
+id:UUID!
+name:String!
+description:String
+owner:User
+playlists:[Playlist]
+}
+
+
+extend type Query {
+  sessions(limit: Int!): [Session!]
+}
+
+extend type Mutation {
+
+}

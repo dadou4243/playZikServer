@@ -1,0 +1,14 @@
+type Playlist {
+id:UUID!
+name:String!
+length: Int
+owner: User
+}
+
+extend type Query {
+  playlists(limit: Int!): [Playlist!]
+}
+
+extend type Mutation {
+
+}
