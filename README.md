@@ -41,13 +41,13 @@ Make sure that you have [Docker][docker] v17 or newer installed plus a good text
 Compose][compose]:
 
 ```bash
-git clone -o nodejs-api-starter -b master --single-branch \
-   https://github.com/kriasoft/nodejs-api-starter.git example-api
-cd example-api                  # Change current directory to the newly created one
+git clone -o davidlas -b master --single-branch \
+   https://github.com/lekev/davlas.git
+cd davidlas                  # Change current directory to the newly created one
 docker-compose up               # Launch Docker containers with the Node.js API app running inside
 ```
 
-The API server must become available at [http://localhost:8080/graphql](http://localhost:8080/graphql)
+The API server must become available at [http://localhost:8080/graphiql](http://localhost:8080/graphiql)
 ([live demo][demo]).
 
 Once the docker container named `api` is started, the Docker engine executes `node tools/run.js`
