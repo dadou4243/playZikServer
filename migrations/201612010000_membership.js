@@ -31,37 +31,6 @@ module.exports.up = async (db) => {
     table.timestamp('updatedAt').defaultTo(db.fn.now());
   });
 
-  id: {
-    type: Sequelize.INTEGER,
-      autoIncrement: true,
-      primaryKey: true
-  },
-  username: {
-    type: Sequelize.STRING,
-      allowNull: false,
-      unique: true
-  },
-  hash: {
-    type: Sequelize.TEXT,
-      allowNull: false
-  },
-  salt: {
-    type: Sequelize.STRING,
-      allowNull: false
-  },
-  activationKey: {
-    type: Sequelize.STRING,
-      allowNull: true
-  },
-  resetPasswordKey: {
-    type: Sequelize.STRING,
-      allowNull: true
-  },
-  verified: {
-    type: Sequelize.BOOLEAN,
-      allowNull: true
-  }
-
 
   await db.schema.createTable('user_logins', (table) => {
     table.string('name', 50).notNullable();

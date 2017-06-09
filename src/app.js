@@ -20,7 +20,7 @@ import email from './email';
 import redis from './redis';
 import passport from './passport';
 import schema from './schema';
-import accountRoutes from './routes/account';
+// import accountRoutes from './routes/account';
 
 i18next
     .use(LanguageDetector)
@@ -65,7 +65,7 @@ app.use(passport.initialize());
 app.use(passport.session());
 app.use(flash());
 
-app.use(accountRoutes);
+// app.use(accountRoutes);
 
 app.get('/graphql/schema', (req, res) => {
     res.type('text/plain').send(printSchema(schema));

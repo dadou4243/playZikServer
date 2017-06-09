@@ -13,6 +13,7 @@ type User {
   }
 
 extend type Query {
+
   users(limit: Int!): [User!]
 }
 
